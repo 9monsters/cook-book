@@ -1,6 +1,10 @@
 import { defineUserConfig } from 'vuepress'
 import { path } from '@vuepress/utils'
 
+import { hopeTheme } from 'vuepress-theme-hope'
+import { zhNavbarConfig } from './navBar';
+import { zhSidebarConfig } from './sideBar';
+
 import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 import { containerPlugin } from '@vuepress/plugin-container'
 import { externalLinkIconPlugin } from '@vuepress/plugin-external-link-icon'
@@ -20,8 +24,46 @@ import { tocPlugin } from '@vuepress/plugin-toc'
 export default defineUserConfig({
   lang: 'zh-CN',
   title: 'CookBook',
-  description: 'CookBook',
+  description: 'CookBook ✨',
   public: 'public',
+  theme: hopeTheme({
+    repo: "NineSwordsMonster/cook-book",
+    repoLabel: "GitHub",
+    repoDisplay: true,
+    nav: zhNavbarConfig,
+    sidebar: zhSidebarConfig,
+    locales: {
+    },
+    breadcrumb: true,
+    displayFooter: true,
+    footer: 'MIT Licensed | Copyright © 2022-present wangjia',
+    copyright: 'WANGJIA',
+    git: {
+      timezone: "Asia/Shanghai",
+    },
+    mdEnhance: {
+      enableAll: true,
+      presentation: {
+        plugins: ["highlight", "math", "search", "notes", "zoom"],
+      },
+    },
+    plugins: {
+      blog: {
+        autoExcerpt: true
+      },
+      comment: {
+        type: 'giscus',
+        repo: 'NineSwordsMonster/cook-book',
+        repoId: 'R_kgDOHUle5w',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOHUle584CPD56',
+        mapping: 'og:title',
+        reactionsEnabled: true,
+        inputPosition: 'top'
+      },
+    }
+  }),
+
   plugins: [
     backToTopPlugin(),
     containerPlugin({type: 'tip'}),

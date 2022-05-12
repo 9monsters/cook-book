@@ -12,6 +12,7 @@
     "build": "vuepress build ."
   },
   "devDependencies": {
+    "@mr-hope/vuepress-theme-types": "^1.28.5",
     "@vuepress/plugin-back-to-top": "^2.0.0-beta.43",
     "@vuepress/plugin-container": "^2.0.0-beta.43",
     "@vuepress/plugin-docsearch": "^2.0.0-beta.43",
@@ -26,6 +27,8 @@
     "@vuepress/plugin-search": "^2.0.0-beta.43",
     "@vuepress/plugin-shiki": "^2.0.0-beta.43",
     "@vuepress/plugin-toc": "^2.0.0-beta.43",
-    "vuepress": "^2.0.0-beta.43"
+    "vuepress": "^2.0.0-beta.43",
+    "vuepress-plugin-comment2": "^2.0.0-beta.54",
+    "vuepress-theme-hope": "^2.0.0-beta.54"
   }
 }
