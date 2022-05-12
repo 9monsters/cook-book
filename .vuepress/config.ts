@@ -21,7 +21,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: 'CookBook',
   description: 'CookBook',
-  public: path.resolve(__dirname, './public'),
+  public: 'public',
   plugins: [
     backToTopPlugin(),
     containerPlugin({type: 'tip'}),
