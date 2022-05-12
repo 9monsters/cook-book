@@ -1,4 +1,4 @@
-ame: docs
+name: docs
 
 on:
   # trigger deployment on every push to main branch
