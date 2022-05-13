@@ -12,17 +12,23 @@ import { searchPlugin } from '@vuepress/plugin-search'
 import { gitPlugin } from '@vuepress/plugin-git'
 import { tocPlugin } from '@vuepress/plugin-toc'
 
-import {temeeConfig} from './themeConfig'
+import { temeeConfig } from './theme-config'
 
 export default defineUserConfig({
   lang: 'zh-CN',
   title: 'CookBook',
   description: 'CookBook ✨',
   public: 'public',
+  locales: {
+    "/": {
+      // 设置正在使用的语言
+      lang: "zh-CN",
+    },
+  },
   theme: temeeConfig,
   plugins: [
-    externalLinkIconPlugin({
-    }),
+    // externalLinkIconPlugin({
+    // }),
     googleAnalyticsPlugin({
       id: 'G-VB7J07W8SW'
     }),
@@ -33,7 +39,7 @@ export default defineUserConfig({
 
       }
     }),
-    nprogressPlugin(),
+    // nprogressPlugin(),
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, './components'),
     }),
