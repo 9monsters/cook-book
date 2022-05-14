@@ -16,6 +16,7 @@ export const zhNavbarConfig: HopeThemeNavbarConfig = navbar([
   {
     text: "分类",
     icon: "info",
+    link: "/",
     children: [
       {
         text: "归档",

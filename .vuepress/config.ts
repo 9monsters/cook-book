@@ -48,11 +48,11 @@ export default defineUserConfig({
       maxSuggestions: 6,
       isSearchable: (page) => page.path !== '/',
     }),
-    gitPlugin({
-      createdTime: true,
-      updatedTime: true,
-      contributors: true
-    }),
+    // gitPlugin({
+    //   createdTime: true,
+    //   updatedTime: true,
+    //   contributors: true
+    // }),
     tocPlugin({
       componentName: 'Toc',
       defaultPropsOptions: {},
